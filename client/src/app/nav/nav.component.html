@@ -37,7 +37,7 @@
                 <li class="dropdown" *ngIf="accountService.currentUser$ | async">
                       <a href="#">Benvenuto utente</a>    
                       <ul>
-                          <li><a href="#" class="dropdown-item">Edizione profilo</a></li>
+                          <li><a routerLink="/member/edit" class="dropdown-item">Edizione profilo</a></li>
                           <li><a href="#" class="dropdown-item" (click)="logout()">LogOut</a></li>                                     
                       </ul>   
                 </li>

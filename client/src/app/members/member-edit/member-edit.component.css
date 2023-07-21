@@ -1,0 +1,107 @@
+.img-thumnail{
+    margin:25px;
+    width: 85%;
+    height: 85%;
+}
+
+.card-body{
+    padding: 0 25px;
+}
+
+.card-footer{
+    padding: 10px 15px;
+    background-color: #fff;
+    border-top: none;
+}
+
+
+  /* Hide the radio buttons */
+  .nav-input {
+    display: none;
+  }
+
+  /* Style the label to look like a tab */
+  .nav-item {
+    display: inline-block;
+    background-color: transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Add hover effect to nav-item */
+  .nav-item:hover {
+    background-color: #ee9999;
+    border-radius: 15px;
+    font-weight: bold;
+    
+  }
+
+  /* Show the content for the checked radio button */
+  .nav-input:checked + .nav-item + .tab-content {
+    display: block;
+    animation: fade-in 0.5s ease;
+  }
+
+  /* Hide the other tab contents */
+  .tab-content {
+    display: none;
+    position: fixed;
+    left: 38%;
+    right: 10%;
+    text-align: initial;
+    background-color: transparent;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Create a grid layout for the tabs and contents */
+  .col-8 {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+  }
+
+  /* Animation for fade-in effect */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+/* Photo gallery slider styles */
+.tab-content input[type="radio"] {
+    display: none;
+  }
+
+  .photo-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  .photo-item {
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 300px;
+    height: 300px;
+    scroll-snap-align: start;
+    background-color: #f1f1f1;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .photo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit:cover;
+  }

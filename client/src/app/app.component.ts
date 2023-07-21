@@ -15,7 +15,7 @@ export class AppComponent implements OnInit{
   constructor(private accountService: AccountService) { }
   //Possiamo aggiungere codice iniziale
   ngOnInit(): void {
-    
+    setTimeout(this.removeSpinner, 2000);
     this.setCurrentUser();
   }
 
@@ -27,6 +27,16 @@ export class AppComponent implements OnInit{
     const user : User = JSON.parse(userString);
     this.accountService.setCurrentUser(user);
   }
+
+  // app.ts
+  removeSpinner() {
+  const spinnerContainer = document.querySelector('.loading-container');
+  spinnerContainer?.classList.remove('show-spinner');
+  }
+
+// Wait for 2 seconds (2000 milliseconds) and then remove the spinner
+  
+
 
 
 
